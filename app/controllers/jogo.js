@@ -22,3 +22,13 @@ module.exports.iniciar = function (application, req, res){
 	res.render('novoJogo');
 }
 
+module.exports.novoLancamento = function (application, req, res){
+
+	console.log('controller: novoLancamento');
+	if (jogoModel){
+		console.log('controller: pede para model fazer novoLancamento');
+
+		var resultado = jogoModel.lancarDados();
+		res.render('novoLancamento', {lancamento : resultado});
+	}
+}
