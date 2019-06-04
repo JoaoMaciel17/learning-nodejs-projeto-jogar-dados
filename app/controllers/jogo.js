@@ -10,14 +10,14 @@ Resonsável por:
 
 */
 
-var model = require('../models/jogo');
+//var model = require('../models/jogo');
 var jogoModel = undefined;
 
 module.exports.iniciar = function (application, req, res){
 
 	console.log('controller: iniciar');
 	console.log('controller: cria instância de jogo');
-	jogoModel = new model.Jogo();
+	jogoModel = new application.app.models.jogo.Jogo();
 	console.log('controller: atualiza view - novoJogo');
 	res.render('novoJogo');
 }
@@ -25,10 +25,10 @@ module.exports.iniciar = function (application, req, res){
 module.exports.novoLancamento = function (application, req, res){
 
 	console.log('controller: novoLancamento');
+
 	if (jogoModel){
 		console.log('controller: pede para model fazer novoLancamento');
-
-		var resultado = jogoModel.lancarDados();
-		res.render('novoLancamento', {lancamento : resultado});
+		var resultado = jogoModel.novoLancamento();
+		res.render('novoLancamento', resultado );
 	}
 }

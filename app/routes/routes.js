@@ -13,7 +13,7 @@ module.exports = function(application){
 
 	application.get('/lancarDados', function(req,res){
 		console.log('routes: /lancarDados');
-		aaplication.app.controllers.jogo.novoLancamento(application,req,res);
+		application.app.controllers.jogo.novoLancamento(application,req,res);
 		//res.send('Esta funcionalidade não foi implementada ainda.');
 	});
 
