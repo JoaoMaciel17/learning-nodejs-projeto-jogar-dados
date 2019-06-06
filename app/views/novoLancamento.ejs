@@ -2,26 +2,54 @@
 <html>
 <head>
 	<title>Projeto Jogar Dados</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 </head>
 <body>
 
-	<main>
-	
-		<h1>Projeto Jogar Dados</h1>
+	<div class="container col-12 col-sm-8 col-md-6 bg-light text-center p-2">
 
-		<p>Pontuação acumulada: <%= pontosAcumulados %></p>
+		<main>
+			
+			<h1>Projeto Jogar Dados</h1>
 
-		<p>Número de Lançamentos: <%= nLancamento %></p>
+				<div class="container">
 
-		<p>Lançamento : <%= lancamento %> </p>
+					<div class="card-deck my-2">
 
-		<p>Jogo do Lançamento atual: <%= jogoLancamento %></p>
+						<div class="col-6 p-2">
 
-		<p>Pontuação do Lançamento: <%= pontosLancamento %></p>
+							<div class="card">
 
-		<button type="button" id="buttonlancarDados">Lancar Dados</button>
-	
-	</main>
+								<div class="card-header">Pontos acumulados</div>
+								<div class="card-body"><%= pontosAcumulados %></div>
+								
+							</div>
+
+						</div>
+						
+					</div>
+
+				</div>
+
+			<p>Pontuação acumulada: <%= pontosAcumulados %></p>
+
+			<p>Número de Lançamentos: <%= nLancamento %></p>
+
+			<p>Lançamento : <%= lancamento %> </p>
+
+			<p>Jogo do Lançamento atual: <%= jogoLancamento %></p>
+
+			<p>Pontuação do Lançamento: <%= pontosLancamento %></p>
+
+			<button class="btn btn-success" type="button" id="buttonLancarDados">Lançar Dados</button>
+
+			<button class="btn btn-info" type="button" id="buttonReiniciarJogo">Reiniciar Jogo</button>
+
+			<button class="btn btn-danger" type="button" id='buttonEncerrarJogo'>Encerrar</button>
+		
+		</main>
+
+	</div>
 
 </body>
 
@@ -29,13 +57,24 @@
 
 <script type="text/javascript">
 	
-	$(document).ready(function){
+	$(document).ready(function(){
 
-		$('#buttonlancarDados').click(function(){
+		$('#buttonLancarDados').click(function(){
 			location.href='lancarDados';
 
-		})
-	}
+		});
+
+		$('#buttonReiniciarJogo').click(function(){
+			location.href='reiniciar';
+
+		});
+
+		$('#buttonEncerrarJogo').click(function(){
+			location.href='encerrar';
+
+		});
+
+	});
 
 </script>
 
