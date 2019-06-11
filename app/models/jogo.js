@@ -58,7 +58,7 @@ Jogo.prototype.analisarLancamento = function(lancamento){
 		resultado = GENERALA;
 	else if ( contagem.find(e => e === 4) )
 		resultado = POKER;
-	else if ( contagem.find(e => e === 3) && contagem.find(e => e === 2) )
+	else if ( contagem.find(e => e === 3) )
 		resultado = FULL;
 	else
 		resultado = NADA;

@@ -9,20 +9,76 @@
 	<div class="container col-12 col-sm-8 col-md-6 bg-light text-center p-2">
 
 		<main>
-			
+
 			<h1>Projeto Jogar Dados</h1>
 
 				<div class="container">
 
 					<div class="card-deck my-2">
 
-						<div class="col-6 p-2">
+						<div class="col-3 p-2">
 
-							<div class="card">
+							<div>
+
+								<div class="card text-white bg-dark mb-3">
+
+								<div class="card-header">Número de Lançamentos</div>
+								<div class="card-body"><%= nLancamento %></div>
+								
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+						<div class="col-3 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
 
 								<div class="card-header">Pontos acumulados</div>
 								<div class="card-body"><%= pontosAcumulados %></div>
+
+							</div>
+
+						</div>
+
+						<div class="col-3 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
 								
+								<div class="card-header">Jogo atual</div>
+								<div class="card-body"><%= jogoLancamento %></div>
+
+							</div>
+
+						</div>
+
+						<div class="col-3 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
+								
+								<div class="card-header">Pontuação do Lançamento</div>
+								<div class="card-body"><%= pontosLancamento %></div>
+
+							</div>
+
+						</div>
+
+						<div class="col-12 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
+								
+								<div class="card-header">Lançamentos</div>
+								<div class="card-body">
+
+									<% for (var i=0; i < lancamento.length; i++) { %>
+									<img src="images/dado<%= lancamento[i]%>.png" class="p-2 col-3 col-sm-2">
+									<% } %>
+
+								</div>
+
 							</div>
 
 						</div>
@@ -30,16 +86,6 @@
 					</div>
 
 				</div>
-
-			<p>Pontuação acumulada: <%= pontosAcumulados %></p>
-
-			<p>Número de Lançamentos: <%= nLancamento %></p>
-
-			<p>Lançamento : <%= lancamento %> </p>
-
-			<p>Jogo do Lançamento atual: <%= jogoLancamento %></p>
-
-			<p>Pontuação do Lançamento: <%= pontosLancamento %></p>
 
 			<button class="btn btn-success" type="button" id="buttonLancarDados">Lançar Dados</button>
 
