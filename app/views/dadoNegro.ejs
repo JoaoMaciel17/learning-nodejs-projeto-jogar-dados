@@ -74,7 +74,7 @@
 								<div class="card-body">
 
 									<% for (var i=0; i < lancamento.length; i++) { %>
-									<img src="images/skin1/dado<%= lancamento[i]%>.png" class="p-2 col-3 col-sm-2">
+									<img src="images/skin2/dado<%= lancamento[i]%>.png" class="p-2 col-3 col-sm-2">
 									<% } %>
 
 
@@ -93,10 +93,6 @@
 			<button class="btn btn-info" type="button" id="buttonReiniciarJogo">Reiniciar Jogo</button>
 
 			<button class="btn btn-danger" type="button" id='buttonEncerrarJogo'>Encerrar</button>
-
-			<div class="col-12 mt-3">
-				<button class="btn btn-secondary" type="button" id="btnDadoNegro" >Dado Negro</button>	
-			</div>
 				
 			</div>
 		
@@ -114,6 +110,7 @@
 
 		$('#buttonLancarDados').click(function(){
 			location.href='lancarDados';
+			location.href='dadoNegro';
 
 		});
 
@@ -124,11 +121,6 @@
 
 		$('#buttonEncerrarJogo').click(function(){
 			location.href='encerrar';
-
-		});
-
-		$('#btnDadoNegro').click(function(){
-			location.href='dadoNegro';
 
 		});
 

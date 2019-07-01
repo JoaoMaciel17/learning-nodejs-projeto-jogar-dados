@@ -28,4 +28,9 @@ module.exports = function(application){
 		application.app.controllers.jogo.encerrar(application, req, res);
 		//res.send('Esta funcionalidade não foi implementada ainda');
 	});
+	application.get('/dadoNegro', function(req,res){
+		console.log('routes: /dadoNegro');
+		application.app.controllers.jogo.dadoNegro(application,req,res);
+	})
+	
 }

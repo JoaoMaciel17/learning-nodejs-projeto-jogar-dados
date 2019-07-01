@@ -54,3 +54,14 @@ module.exports.encerrar = function (application, req, res) {
 	jogoModel = undefined;
 	res.render('home');
 }
+
+module.exports.dadoNegro = function (application, req, res){
+
+	console.log('controller: dadoNegro');
+
+	if (jogoModel){
+		console.log('controller: pede para model fazer novoLancamento');
+		var resultado = jogoModel.novoLancamento();
+		res.render('dadoNegro', resultado );
+	}
+}

@@ -7,6 +7,10 @@ function Jogo(dados = 5, lados = 6) {
 	this.n = 0;
 }
 
+Jogo.prototype.mudarDado = function(){
+	
+}
+
 Jogo.prototype.novoJogo = function(){
 	console.log('model: novoJogo');
 	this.pontos = 0; //Pontos acumulados
