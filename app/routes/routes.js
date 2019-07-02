@@ -32,5 +32,9 @@ module.exports = function(application){
 		console.log('routes: /dadoNegro');
 		application.app.controllers.jogo.dadoNegro(application,req,res);
 	})
+	application.get('/dadoRpg', function(req,res){
+		console.log('routes: /dadoRpg');
+		application.app.controllers.jogo.dadoRpg(application,req,res);
+	})
 	
 }

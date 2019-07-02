@@ -3,10 +3,17 @@
 <head>
 	<title>Projeto Jogar Dados</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.bg-img {
+			background-image: url(/images/bgimg/bg_img3.jpg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+	</style>
 </head>
-<body>
+<body class="bg-img">
 
-	<div class="container col-12 col-sm-8 col-md-6 bg-light text-center p-2">
+	<div class="container col-12 col-sm-8 col-md-6 bg-light text-center p-2 mt-4">
 
 		<main>
 
@@ -90,12 +97,15 @@
 
 			<button class="btn btn-success" type="button" id="buttonLancarDados">Lançar Dados</button>
 
-			<button class="btn btn-info" type="button" id="buttonReiniciarJogo">Reiniciar Jogo</button>
+			<button class="btn btn-info m-4" type="button" id="buttonReiniciarJogo">Reiniciar Jogo</button>
 
 			<button class="btn btn-danger" type="button" id='buttonEncerrarJogo'>Encerrar</button>
 
-			<div class="col-12 mt-3">
-				<button class="btn btn-secondary" type="button" id="btnDadoNegro" >Dado Negro</button>	
+			<div class="col-12 m-3">
+				<hr>
+				<p>Escolha um dado customizado:</p>
+				<button class="btn btn-secondary" type="button" id="btnDadoNegro">Dado Negro</button>
+				<button class="btn btn-secondary" type="button" id="btnDadoRpg">Dado RPG</button>	
 			</div>
 				
 			</div>
@@ -128,7 +138,32 @@
 		});
 
 		$('#btnDadoNegro').click(function(){
-			location.href='dadoNegro';
+			var pontosAtuais = <%= pontosAcumulados %>;
+			var pontosNecessarios = 100;
+			var confirmarCompra = confirm("Este dado irá custar 100 dos seus pontos. Deseja prosseguir?"); 
+			if (confirmarCompra == true && pontosAtuais >= pontosNecessarios) {
+				location.href='dadoNegro';
+			}
+			else if (confirmarCompra == true && pontosAtuais < pontosNecessarios) {
+				alert("Você não possui pontos o suficiente, continue jogando.")
+			} else {
+
+			}
+
+		});
+
+		$('#btnDadoRpg').click(function(){
+			var pontosAtuais = <%= pontosAcumulados %>;
+			var pontosNecessarios = 150;
+			var confirmarCompra = confirm("Este dado irá custar 150 dos seus pontos. Deseja prosseguir?"); 
+			if (confirmarCompra == true && pontosAtuais >= pontosNecessarios) {
+				location.href='dadoRpg';
+			}
+			else if (confirmarCompra == true && pontosAtuais < pontosNecessarios) {
+				alert("Você não possui pontos o suficiente, continue jogando.")
+			} else { 
+
+			}
 
 		});
 

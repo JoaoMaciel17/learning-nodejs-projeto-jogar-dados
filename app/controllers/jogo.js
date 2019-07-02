@@ -65,3 +65,14 @@ module.exports.dadoNegro = function (application, req, res){
 		res.render('dadoNegro', resultado );
 	}
 }
+
+module.exports.dadoRpg = function (application, req, res){
+
+	console.log('controller: dadoRpg');
+
+	if (jogoModel){
+		console.log('controller: pede para model fazer novoLancamento');
+		var resultado = jogoModel.novoLancamento();
+		res.render('dadoRpg', resultado );
+	}
+}

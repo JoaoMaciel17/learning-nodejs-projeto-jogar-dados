@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Projeto Jogar Dados</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.bg-img {
+			background-image: url(/images/bgimg/bg_img2.jpg);
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body class="bg-img">
+
+	<div class="container col-12 col-sm-8 col-md-6 bg-light text-center p-2 mt-4">
+
+		<main>
+
+			<h1>Projeto Jogar Dados</h1>
+
+				<div class="container">
+
+					<div class="card-deck my-2">
+
+						<div class="col-3 p-2">
+
+							<div>
+
+								<div class="card text-white bg-dark mb-3">
+
+								<div class="card-header">Número de Lançamentos</div>
+								<div class="card-body"><%= nLancamento %></div>
+								
+								</div>
+
+
+							</div>
+
+						</div>
+
+
+						<div class="col-3 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
+
+								<div class="card-header">Pontos acumulados</div>
+								<div class="card-body"><%= pontosAcumulados - '150' %></div>
+
+							</div>
+
+						</div>
+
+						<div class="col-3 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
+								
+								<div class="card-header">Jogo atual</div>
+								<div class="card-body"><%= jogoLancamento %></div>
+
+							</div>
+
+						</div>
+
+						<div class="col-3 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
+								
+								<div class="card-header">Pontuação do Lançamento</div>
+								<div class="card-body"><%= pontosLancamento %></div>
+
+							</div>
+
+						</div>
+
+						<div class="col-12 p-2">
+							
+							<div class="card text-white bg-dark mb-3">
+								
+								<div class="card-header">Lançamentos</div>
+								<div class="card-body">
+
+									<% for (var i=0; i < lancamento.length; i++) { %>
+									<img src="images/skin3/dado<%= lancamento[i]%>.png" class="p-2 col-3 col-sm-2">
+									<% } %>
+
+
+								</div>
+
+							</div>
+
+						</div>
+						
+					</div>
+
+				</div>
+
+			<button class="btn btn-success" type="button" id="buttonLancarDados">Lançar Dados</button>
+
+			<button class="btn btn-info m-4" type="button" id="buttonReiniciarJogo">Reiniciar Jogo</button>
+
+			<button class="btn btn-danger" type="button" id='buttonEncerrarJogo'>Encerrar</button>
+				
+			</div>
+		
+		</main>
+
+	</div>
+
+</body>
+
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<script type="text/javascript">
+	
+	$(document).ready(function(){
+
+		$('#buttonLancarDados').click(function(){
+			location.href='lancarDados';
+			location.href='dadoRpg';
+
+		});
+
+		$('#buttonReiniciarJogo').click(function(){
+			location.href='reiniciar';
+
+		});
+
+		$('#buttonEncerrarJogo').click(function(){
+			location.href='encerrar';
+
+		});
+
+	});
+
+</script>
+
+</html>
