@@ -5,6 +5,7 @@ function Jogo(dados = 5, lados = 6) {
 	this.lados = lados;
 	this.pontos = 0;
 	this.n = 0;
+	this.skin = 'skin3';
 }
 
 Jogo.prototype.novoJogo = function(){
@@ -84,6 +85,7 @@ Jogo.prototype.novoLancamento = function(){
 		lancamento : lancamento,
 		jogoLancamento : analiseLancamento.jogo,
 		pontosLancamento : analiseLancamento.pontos,
+		skin : this.skin
 
 	};
 

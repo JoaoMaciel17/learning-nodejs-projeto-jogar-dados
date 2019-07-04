@@ -36,5 +36,11 @@ module.exports = function(application){
 		console.log('routes: /dadoRpg');
 		application.app.controllers.jogo.dadoRpg(application,req,res);
 	})
+
+		application.get('/comprarRpg', function(req,res){
+		console.log('routes: /comprarRpg');
+		application.app.controllers.jogo.comprarRpg(application,req,res);
+		application.app.controllers.jogo.novoLancamento(application,req,res);
+	})
 	
 }

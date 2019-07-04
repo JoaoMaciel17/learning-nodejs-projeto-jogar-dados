@@ -7,7 +7,7 @@
 		.bg-img {
 			background-image: url(/images/bgimg/bg_img3.jpg);
 			background-size: 100%;
-			background-repeat: no-repeat;
+			background-repeat: repeat;
 		}
 	</style>
 </head>
@@ -81,7 +81,7 @@
 								<div class="card-body">
 
 									<% for (var i=0; i < lancamento.length; i++) { %>
-									<img src="images/skin1/dado<%= lancamento[i]%>.png" class="p-2 col-3 col-sm-2">
+									<img src="images/<%= skin %>/dado<%= lancamento[i]%>.png" class="p-2 col-3 col-sm-2">
 									<% } %>
 
 
